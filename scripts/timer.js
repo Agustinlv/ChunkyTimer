@@ -29,11 +29,13 @@ function hideNavbar(){
     if (navbarHidden)
     {
         headerDOM.style.display = "none";
+        hideButtonDOM.textContent = "show controls";
         timerDOM.style.height = "98vh";
     }
     else
     {
         headerDOM.style.display = "flex";
+        hideButtonDOM.textContent = "hide controls";
         timerDOM.style.height = "90vh";
     };
 };
