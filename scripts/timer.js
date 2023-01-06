@@ -9,6 +9,8 @@ let timer = {hours: 0, minutes: 0, seconds: 0};
 let timeString = "";
 let pausedTimer = true;
 
+timerDOM.id = "timer";
+
 startButtonDOM.addEventListener('click', startTimer);
 resetButtonDOM.addEventListener('click', resetTimer);
 
@@ -50,31 +52,28 @@ function resetTimer(){
     saveTimer();
 };
 
+function addTime(previousLevel, nextLevel){
+    if (timer[`${previousLevel}`] > 59)
+    {
+        timer[`${previousLevel}`] = 0;
+
+        timer[`${nextLevel}`]++;
+    };
+};
+
 function runTimer(){
     timer.seconds++;
 
-    if (timer.seconds > 59)
-    {
-        timer.seconds = 0;
-        
-        timer.minutes++;
-    };
+    addTime("seconds", "minutes");
 
-    if (timer.minutes > 59)
-    {
-        timer.minutes = 0;
-
-        timer.hours++;
-    };
+    addTime("minutes", "hours");
 
     saveTimer(timer);
 };
 
 function timerMain(){
     
-    timeString = pad(timer.hours, 2) + ":" + pad(timer.minutes, 2) + ":" + pad(timer.seconds, 2);
-    
-    timerDOM.id = "timer";
+    timeString = timer.hours + ":" + pad(timer.minutes, 2) + ":" + pad(timer.seconds, 2);
     
     timerDOM.textContent = timeString;
     

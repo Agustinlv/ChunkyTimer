@@ -5,17 +5,29 @@
     background-color: black;
     color: whitesmoke;
     user-select: none;
+    font-family: 'Roboto','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #timerContainer{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
-    font-family:'Roboto Medium','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 10em;
+}
+
+#timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28vw;
     font-weight: 500;
+    height: 90vh;
+    width: 90vw;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #navbar{
@@ -23,7 +35,7 @@
     justify-content: center;
     gap: 30px;
     align-items: center;
-    width: 100vw;
+    width: 90vw;
     height: fit-content;
     padding: 10px;
 }
@@ -33,11 +45,10 @@ button{
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    font-weight: 700;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
     background-color: whitesmoke;
     color: black;
-    height: 30px;
+    height: 40px;
     padding: 10px;
     border-radius: 5px;
 }
@@ -48,14 +59,14 @@ button:hover{
 
 input{
     text-transform: uppercase;
-    font-weight: 700;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 1em;
     text-align: center;
     background-color: whitesmoke;
     color: black;
     border-radius: 5px;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 @media all and (display-mode: fullscreen) {
