@@ -2,20 +2,40 @@ const timerContainerDOM = document.getElementById('timerContainer');
 const timerDOM = document.createElement('div');
 const startButtonDOM = document.getElementById('startButton');
 const resetButtonDOM = document.getElementById('resetButton');
+const hideButtonDOM = document.getElementById('hideButton');
+const headerDOM = document.getElementById('header');
 const hoursDOM = document.getElementById('hours');
 const minutesDOM = document.getElementById('minutes');
 const secondsDOM = document.getElementById('seconds');
 let timer = {hours: 0, minutes: 0, seconds: 0};
 let timeString = "";
 let pausedTimer = true;
+let navbarHidden = false;
 
 timerDOM.id = "timer";
 
 startButtonDOM.addEventListener('click', startTimer);
 resetButtonDOM.addEventListener('click', resetTimer);
+hideButtonDOM.addEventListener('click', hideNavbar);
+
 
 function pad(number, padding){
     return String(number).padStart(padding, '0');
+};
+
+function hideNavbar(){
+    navbarHidden = !navbarHidden;
+
+    if (navbarHidden)
+    {
+        headerDOM.style.display = "none";
+        timerDOM.style.height = "98vh";
+    }
+    else
+    {
+        headerDOM.style.display = "flex";
+        timerDOM.style.height = "90vh";
+    };
 };
 
 function saveTimer(){
