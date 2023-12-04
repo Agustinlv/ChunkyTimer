@@ -18,8 +18,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 28vw;
-    font-weight: 500;
+    font-family: 'Roboto', 'Segoe UI';
+    font-size: 23vw;
+    font-weight: 600;
     height: 90vh;
     width: 90vw;
 }
