@@ -89,6 +89,10 @@ input{
     height: 40px;
 }
 
+#touchControl{
+    user-select: none;
+}
+
 #touchControl:hover{
     cursor: pointer;
 }
