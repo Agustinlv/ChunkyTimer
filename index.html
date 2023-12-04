@@ -14,7 +14,7 @@
 <body>
     <header id="header">
         <nav id="navbar">
-            <button id="startButton">start / pause</button>
+            <button id="startButton">start</button>
             <form>
                 <input id="hours" type="text">
                 <input id="minutes" type="text">
@@ -24,8 +24,10 @@
         </nav>
     </header>
     <main>
-        <button id="hideButton">hide controls</button>
-        <div id="timerContainer"></div>
+        <button id="hideButton"><img id="hideButtonImg" src="./img/hide.png"></button>
+        <div id="touchControl">
+            <div id="timerContainer"></div>
+        </div>
     </main>
 </body>
 <script src="./scripts/timer.js"></script>
